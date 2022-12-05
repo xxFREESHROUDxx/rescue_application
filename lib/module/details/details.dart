@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:rescue_pet/model/spons/spons.dart';
-import 'package:rescue_pet/module/authenticate/userQuestionare/UserQuestionaire.dart';
+// import 'package:rescue_pet/module/authenticate/userQuestionare/UserQuestionaire.dart';
 import 'package:rescue_pet/module/details/component/popUp.dart';
 
 class DetailScreen extends StatefulWidget {

@@ -90,14 +90,14 @@ class DatabaseService {
   CollectionReference appRef =
       FirebaseFirestore.instance.collection('Applications');
   Future<void> postApplication(
-      String fullName,
-      String effort,
+      String postId,
+      String breed,
       String reason,
+      String effort,
+      String fullName,
       String person,
       String contact,
-      String postId,
       String location,
-      String breed,
       String result) async {
     PermissionStatus permission = await locationObj.hasPermission();
     if (permission == PermissionStatus.granted ||
@@ -105,19 +105,19 @@ class DatabaseService {
       var position = await locationObj.getLocation();
       try {
         await appRef.doc().set({
-          'fullname': fullName,
-          'effort': effort,
+          'postId': postId,
+          'breed': breed,
           'desc': reason,
+          'effort': effort,
+          'fullname': fullName,
           'person': person,
           'contact': contact,
-          'postId': postId,
-          'isApproved': false,
-          'userid': userController.uid.value,
+          'location': location,
+          'applicantEffort': result,
           'long': position.longitude,
           'lat': position.latitude,
-          'location': location,
-          'breed': breed,
-          'applicantEffort': result,
+          'userid': userController.uid.value,
+          'isApproved': false,
         });
       } catch (e) {
         print(e);

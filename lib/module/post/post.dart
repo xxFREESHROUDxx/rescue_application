@@ -68,27 +68,28 @@ class _PostScreenState extends State<PostScreen> {
                       snapshot.data!.docs.map((DocumentSnapshot document) {
                     Map<String, dynamic> data =
                         document.data()! as Map<String, dynamic>;
-                    for(var params in param){
-                      if(params == data['attention']){
-                        return ListTile(
-                          leading: Image.network(
-                            '${data['imgUrl']}',
-                            width: 60,
-                          ),
-                          title: Text('${data['breed']}'),
-                          subtitle: Text('Location ${data['location']}'),
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        DetailScreen(document.id)));
-                          },
-                        );
-                      }else{
-                        continue;
-                      }
-                    }
+                    print('data: ${data}');
+                    // for (var params in param) {
+                    // if (params == data['attention']) {
+                    return ListTile(
+                      leading: Image.network(
+                        '${data['imgUrl']}',
+                        width: 60,
+                      ),
+                      title: Text('${data['breed']}'),
+                      subtitle: Text('Location ${data['location']}'),
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    DetailScreen(document.id)));
+                      },
+                    );
+                    // } else {
+                    //   continue;
+                    // }
+                    // }
                     return ListTile();
                   }).toList(),
                 );
@@ -111,5 +112,3 @@ class _PostScreenState extends State<PostScreen> {
     );
   }
 }
-
-

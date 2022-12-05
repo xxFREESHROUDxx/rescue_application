@@ -133,18 +133,19 @@ class _ApplicationFormState extends State<ApplicationForm> {
                             context,
                             MaterialPageRoute(
                                 builder: (context) => UserQuestionare(
-                                    widget.effort,
-                                    widget.postId,
-                                    widget.reason,
-                                    fullname,
-                                    person,
-                                    location,
-                                    contact,
-                                    widget.breed)));
-                        // print('breed: ${widget.breed}');
-                        // print('effort: ${widget.effort}');
-                        // print('reason: ${widget.reason}');
-                        // print('postId: ${widget.postId}');
+                                      widget.postId,
+                                      widget.breed,
+                                      widget.reason,
+                                      widget.effort,
+                                      fullname,
+                                      person,
+                                      contact,
+                                      location,
+                                    )));
+                        print('breed: ${widget.breed}');
+                        print('effort: ${widget.effort}');
+                        print('reason: ${widget.reason}');
+                        print('postId: ${widget.postId}');
                       }
                       // Navigator.push(
                       //     context,

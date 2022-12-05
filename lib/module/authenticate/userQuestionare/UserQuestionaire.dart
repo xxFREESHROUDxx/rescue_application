@@ -19,8 +19,8 @@ class UserQuestionare extends StatefulWidget {
   String person;
   String contact;
   String location;
-  UserQuestionare(this.breed, this.effort, this.postId, this.reason,
-      this.fullname, this.person, this.location, this.contact,
+  UserQuestionare(this.postId, this.breed, this.reason, this.effort,
+      this.fullname, this.person, this.contact, this.location,
       {Key? key})
       : super(key: key);
   // String? email;
@@ -40,7 +40,7 @@ class UserQuestionare extends StatefulWidget {
 class _UserQuestionareState extends State<UserQuestionare> {
   UserController user = Get.find();
   String? postId = '';
-  String breed = '';
+  // String breed = '';
   final _formKey = GlobalKey<FormState>();
   final List<String> _hours = ["can't", "half", "half_one", "one_more"];
   String _hour = "";
@@ -274,21 +274,21 @@ class _UserQuestionareState extends State<UserQuestionare> {
                             print(result);
                             Future.delayed(const Duration(seconds: 3), () {
                               service.postApplication(
-                                  breed,
-                                  widget.effort,
                                   widget.postId,
+                                  widget.breed,
                                   widget.reason,
+                                  widget.effort,
                                   widget.fullname,
                                   widget.person,
-                                  widget.location,
                                   widget.contact,
+                                  widget.location,
                                   result);
                             });
                             // print('breed: ${widget.breed}');
-                            print('effort: ${widget.effort}');
-                            print('reason: ${widget.reason}');
-                            print('postId: ${widget.postId}');
-                            print('result: ${result}');
+                            // print('effort: ${widget.effort}');
+                            // print('reason: ${widget.reason}');
+                            // print('postId: ${widget.postId}');
+                            // print('result: ${result}');
                             Navigator.push(
                               context,
                               MaterialPageRoute(
