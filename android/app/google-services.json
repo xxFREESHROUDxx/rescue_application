@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "804277675023",
+    "project_id": "rescuedogceeb",
+    "storage_bucket": "rescuedogceeb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:804277675023:android:3e7d6e5ad5b0ff444caf7a",
+        "android_client_info": {
+          "package_name": "com.example.rescue_pet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "804277675023-ra0ueuqs4qjke5kijgh0b444meh0qetj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFniSeEIh6OWttdKuoGvIDPQvvlpRvSyU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "804277675023-ra0ueuqs4qjke5kijgh0b444meh0qetj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
